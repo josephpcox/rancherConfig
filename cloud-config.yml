@@ -1,0 +1,18 @@
+#cloud-config
+
+hostname: aquarious
+
+rancher:
+  network:
+    interfaces:
+      eth*:
+        dhcp: true
+      eth0:
+        address: 192.168.0.2/24
+        gateway: 192.168.0.1
+    dns:
+      nameservers:
+        - 1.1.1.1
+
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCxrJHPRdNWu3qDki42X4ZJFPJGzTGsu5n7ENW0Sh2P3coXRluJNpaxL8+Alg5eVH+lY+7gVZErhWLGW0nmnhcwB1mMfvK/i8eLlS8oIzpH5dTyDZT9Q/2yJiZW6CAKH9ezc+mJIX4ikvw0Uvd0rE/TmYanfiX2I89Co+Z+6X67GzL3xyJDdi2mFhJkudunFcqN65dUAH+cAfZYURvfrs387nYClqN4Lv9eABoRNt+kkoToxrH+aVtV0/uhe9XZjGKSEn5PRn3vnY+QlCfZhSD3XOHtyYYRSi9puWF7l95tEo/5JHyTUvKw6di0Y9BkEG4ETlwUIYSJ/cG3DX4Jz55UUKe54hGIOA2sL1oZqxw77wBplEaaC3Zxzd8wnw2ym7kSJeF2GabQu70oZoVx8kwG52Ztz8c757rH7KMuD2UlfR/AAbZbCX6DdJ4okaH5sL6CLvQU8cIeFtGurrpfOt5vsdaSdb/ca56avEcaczoPSAGPOQ++8hR7Z62oZp2L7Zk= joseph@DESKTOP-T5QFBU7
